@@ -1,4 +1,3 @@
-
 # Rails 3.1 Template
 
 This is a template for new Rails projects. It incorporates files from these
@@ -14,7 +13,15 @@ projects to provide a solid basis for a new site.
 
 Using this is as easy as 1-2-3.
 
-*First*: Create a new Rails project, using the `rails31-slab.rb` file as a
+*First*: Install the rails 3.1.x gem:
+
+    gem install rails
+
+if rails is already installed, make sure it's updated:
+
+    gem update rails
+
+*Second*: Create a new Rails project, using the `rails31-slab.rb` file as a
 template:
 
 ```bash
@@ -26,7 +33,7 @@ Answer the questions. It will ask whether you want to install
 name the model for users. If you do want to use devise, look through the
 messages for some post-install instructions.
 
-*Second*: `cd` into the project directory and build something!
+*Third*: `cd` into the project directory and build something!
 
 ## Details
 
@@ -38,7 +45,7 @@ The main HTML file is incorporated into
 ### Stylesheets
 
 The stylesheets from HTML5 Boilerplate and 960.gs are all in
-`vendor/assets/stylesheets`. 
+`vendor/assets/stylesheets`.
 
 ### JavaScript
 
