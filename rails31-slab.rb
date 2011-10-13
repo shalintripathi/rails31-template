@@ -111,6 +111,7 @@ gem "spork", :group => [:test]
 gem "factory_girl_rails", :group => [:test]
 gem "rails-footnotes", :group => [:development]
 gem "rails_best_practices", "~> 1.1.0", :group => [:development]
+gem "heroku", :group => [:development]
 
 # Run again now to make sure everything's installed for the rake tasks to
 # follow.
