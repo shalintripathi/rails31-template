@@ -57,7 +57,7 @@ gsub_file 'app/views/layouts/application.html.erb', /<link rel="stylesheet" href
   "<%= stylesheet_link_tag \"style\", \"960gs\", \"application\" %>"
 end
 
-gsub_file 'app/views/layouts/application.html.erb', /<script src="js\/libs\/modernizr-2.0.6.min.js"><\/script>/, '<%= javascript_include_tag "modernizr.min", :cache => "modernizr" %>'
+gsub_file 'app/views/layouts/application.html.erb', /<script src="js\/libs\/modernizr-2.0.6.min.js"><\/script>/, '<%= javascript_include_tag "modernizr.min" %>'
 gsub_file 'app/views/layouts/application.html.erb', /<meta charset="utf-8">/ do
   "<meta charset=\"utf-8\">
   <%= csrf_meta_tag %>"
