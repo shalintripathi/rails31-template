@@ -81,7 +81,7 @@ end
 gsub_file 'app/views/layouts/application.html.erb', /<!-- Grab Google CDN's jQuery[\s\S]*end scripts-->/, '<%= javascript_include_tag "application" %>'
 
 # use rvm
-create_file ".rvmrc", "rvm use 1.9.2"
+create_file ".rvmrc", "rvm use 1.9.3"
 
 # Need to run here to get rid of error messages during 'generate
 # "devise:install"' below.
