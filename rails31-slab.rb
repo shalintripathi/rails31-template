@@ -14,10 +14,10 @@
 #
 
 # Download Modernizr JS libraries
-get "https://raw.github.com/paulirish/html5-boilerplate/master/js/libs/modernizr-2.0.6.min.js", "vendor/assets/javascripts/modernizr.min.js"
+get "https://raw.github.com/h5bp/html5-boilerplate/master/js/libs/modernizr-2.0.6.min.js", "vendor/assets/javascripts/modernizr.min.js"
 
 # Download HTML5 Boilerplate & 960gs stylesheets
-get "https://raw.github.com/paulirish/html5-boilerplate/master/css/style.css", "vendor/assets/stylesheets/style.css"
+get "https://raw.github.com/h5bp/html5-boilerplate/master/css/style.css", "vendor/assets/stylesheets/style.css"
 get "http://grids.heroku.com/grid.css?column_width=60&column_amount=12&gutter_width=20", "vendor/assets/stylesheets/960gs.css"
 
 gsub_file 'vendor/assets/stylesheets/style.css', / \* ==\|== normalize ==========================================================/, ' *'
@@ -25,9 +25,9 @@ gsub_file 'vendor/assets/stylesheets/style.css', / \* ==\|== normalize =========
 # TODO: scholarslab icons; 114x114, 57x57, 72x72
 
 # Boilerplate assets
-get "https://raw.github.com/paulirish/html5-boilerplate/master/.htaccess", "public/.htaccess"
-get "https://raw.github.com/paulirish/html5-boilerplate/master/crossdomain.xml", "public/crossdomain.xml"
-get "https://raw.github.com/paulirish/html5-boilerplate/master/humans.txt", "public/humans.txt"
+get "https://raw.github.com/h5bp/html5-boilerplate/master/.htaccess", "public/.htaccess"
+get "https://raw.github.com/h5bp/html5-boilerplate/master/crossdomain.xml", "public/crossdomain.xml"
+get "https://raw.github.com/h5bp/html5-boilerplate/master/humans.txt", "public/humans.txt"
 
 append_to_file 'public/humans.txt' do
   %q{
@@ -48,7 +48,7 @@ inside('app/views/layouts') do
   FileUtils.rm_rf 'application.html.erb'
 end
 
-get "https://raw.github.com/paulirish/html5-boilerplate/master/index.html", "app/views/layouts/application.html.erb"
+get "https://raw.github.com/h5bp/html5-boilerplate/master/index.html", "app/views/layouts/application.html.erb"
 add_file "app/views/layouts/_header.html.erb"
 add_file "app/views/layouts/_footer.html.erb"
 
@@ -57,7 +57,7 @@ gsub_file 'app/views/layouts/application.html.erb', /<link rel="stylesheet" href
   "<%= stylesheet_link_tag \"style\", \"960gs\", \"application\" %>"
 end
 
-gsub_file 'app/views/layouts/application.html.erb', /<script src="js\/libs\/modernizr-2.0.6.min.js"><\/script>/, '<%= javascript_include_tag "modernizr.min", :cache => "modernizr" %>'
+gsub_file 'app/views/layouts/application.html.erb', /<script src="js\/libs\/modernizr-2.0.6.min.js"><\/script>/, '<%= javascript_include_tag "modernizr.min" %>'
 gsub_file 'app/views/layouts/application.html.erb', /<meta charset="utf-8">/ do
   "<meta charset=\"utf-8\">
   <%= csrf_meta_tag %>"
