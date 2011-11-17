@@ -64,19 +64,20 @@ gsub_file 'app/views/layouts/application.html.erb', /<meta charset="utf-8">/ do
 end
 
 gsub_file 'app/views/layouts/application.html.erb', /<header>[\s\S]*<\/footer>/ do
-  %q{<div id="container">
-     <header>
+  %q{
+  <div id="container">
+    <header>
       <%= render 'layouts/header' %>
-     </header>
+    </header>
 
-     <div id="main" role="main">
+    <div id="main" role="main">
       <%= yield %>
-     </div>
+    </div>
 
-     <footer>
+    <footer>
       <%= render 'layouts/footer' %>
-     </footer>
-    </div>}
+    </footer>
+  </div>}
 end
 gsub_file 'app/views/layouts/application.html.erb', /<!-- Grab Google CDN's jQuery[\s\S]*end scripts-->/, '<%= javascript_include_tag "application" %>'
 
