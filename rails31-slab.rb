@@ -63,7 +63,7 @@ gsub_file 'app/views/layouts/application.html.erb', /<meta charset="utf-8">/ do
   <%= csrf_meta_tag %>"
 end
 
-gsub_file 'app/views/layouts/application.html.erb', /<div id="container">[\s\S]*<\/div>/ do
+gsub_file 'app/views/layouts/application.html.erb', /<header>[\s\S]*<\/footer>/ do
   %q{<div id="container">
      <header>
       <%= render 'layouts/header' %>
